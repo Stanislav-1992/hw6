@@ -68,11 +68,11 @@ public class Main {
 
         int save = 29000;
         int month = 12;
-        float deposit = 1.01F;
-        float saveAndDeposit = (float) save * deposit;
+        float depositPercent = 1.01F;
         float full = 0F;
         for (int i = 1; i <= month; i++) {
-            full = full + saveAndDeposit;
+            full = full * depositPercent;
+            full = full + save;
             System.out.println("Месяц " + i + " ,сумма накоплений равна " + full + " руб");
         }
         System.out.println("Итого накопений за год " + full + " руб");
@@ -85,10 +85,5 @@ public class Main {
             step = number * i;
             System.out.println(number + " * " + i + " = " + step);
         }
-
-
-
-
-
     }
 }
